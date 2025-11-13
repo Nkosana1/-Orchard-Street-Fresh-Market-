@@ -59,29 +59,29 @@ p, li {
 }
 
 /* ============================================
-   Header Styles
+   Header Styles - Mobile First
    ============================================ */
 header {
     background-color: var(--neutral-bg);
     border-bottom: 2px solid rgba(44, 62, 80, 0.1);
-    padding: 2rem 2rem 1.5rem;
+    padding: 1.5rem 1rem;
     margin-bottom: 2rem;
 }
 
 header h1 {
     color: var(--primary-color);
     margin-bottom: 1.5rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 /* ============================================
-   Navigation Styles
+   Navigation Styles - Mobile First (Vertical Stack)
    ============================================ */
 nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    flex-direction: column; /* Mobile: vertical stack */
+    gap: 1rem;
     padding: 0;
 }
 
@@ -89,10 +89,10 @@ nav a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
     transition: color 0.3s ease;
-    display: inline-block;
+    display: block;
 }
 
 nav a:hover {
@@ -100,12 +100,12 @@ nav a:hover {
 }
 
 /* ============================================
-   Main Content Styles
+   Main Content Styles - Mobile First
    ============================================ */
 main {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1.5rem 1rem;
     min-height: 60vh;
 }
 
@@ -115,6 +115,45 @@ section {
 
 article {
     padding: 1.5rem 0;
+}
+
+/* ============================================
+   Product Grid Styles - Mobile First (Single Column)
+   ============================================ */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: single column */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-item {
+    background-color: var(--neutral-bg);
+    border: 1px solid rgba(44, 62, 80, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+/* ============================================
+   Image Styles - Fluid Images
+   ============================================ */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* ============================================
@@ -198,38 +237,92 @@ footer p:last-child {
 }
 
 /* ============================================
-   Responsive Design
+   Responsive Design - Tablet Breakpoint (768px)
    ============================================ */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     header {
-        padding: 1.5rem 1rem 1rem;
+        padding: 2rem 2rem 1.5rem;
     }
 
     header h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
     }
 
+    /* Navigation: Change to horizontal row on tablet */
     nav ul {
-        gap: 1rem;
-        flex-direction: column;
+        flex-direction: row;
+        gap: 2rem;
+        flex-wrap: wrap;
     }
 
     nav a {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem;
+        display: inline-block;
     }
 
     main {
-        padding: 1.5rem 1rem;
+        padding: 2rem;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     h2 {
-        font-size: 1.75rem;
+        font-size: 2rem;
     }
 
+    /* Product Grid: 2 columns on tablet */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* ============================================
+   Responsive Design - Desktop Breakpoint (1024px)
+   ============================================ */
+@media (min-width: 1024px) {
+    /* Main content: max-width 1200px and centered */
+    main {
+        max-width: 1200px;
+        padding: 2rem;
+    }
+
+    /* Header: Logo on left, navigation on right in single row */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 2rem 1.5rem;
+    }
+
+    header h1 {
+        margin-bottom: 0;
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        margin: 0;
+    }
+
+    /* Product Grid: 3 columns on desktop */
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    .product-item {
+        padding: 2rem;
+    }
+}
+
+/* ============================================
+   Mobile-Specific Adjustments (if needed)
+   ============================================ */
+@media (max-width: 767px) {
     footer {
         padding: 2rem 1rem 1.5rem;
     }
