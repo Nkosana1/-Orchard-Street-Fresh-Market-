@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
         <h1>Orchard St. Market</h1>
         <nav>
@@ -36,7 +37,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section>
             <h2>Find Us</h2>
             <article>
@@ -59,7 +60,7 @@
                     </div>
                 <?php endif; ?>
                 
-                <form action="send_telegram.php" method="POST" class="contact-form">
+                <form action="send_telegram.php" method="POST" class="contact-form" aria-label="Contact form">
                     <div class="form-group">
                         <label for="name">Name <span class="required">*</span></label>
                         <input type="text" id="name" name="name" required placeholder="Your full name">
