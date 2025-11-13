@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find us at Orchard Street Fresh Market - Visit our store in NYC's Lower East Side or get in touch">
-    <title>Find Us - Orchard Street Fresh Market</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Contact Us - Orchard Street Fresh Market | 45 Orchard St, NYC Lower East Side</title>
+    <meta name="description" content="Visit Orchard Street Fresh Market at 45 Orchard St, New York, NY 10002. Contact us for questions, special orders, or just to say hello. Open daily in NYC's Lower East Side.">
+    <meta name="keywords" content="Orchard Street Fresh Market contact, produce market Lower East Side, fresh market NYC address, contact produce store New York, 45 Orchard Street NYC">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://orchardstreetfreshmarket.com/contact.php">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Contact Us - Orchard Street Fresh Market | NYC Lower East Side">
+    <meta property="og:description" content="Visit Orchard Street Fresh Market at 45 Orchard St, New York, NY 10002. Contact us for questions, special orders, or just to say hello. Open daily in NYC's Lower East Side.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&auto=format&fit=crop">
+    <meta property="og:url" content="https://orchardstreetfreshmarket.com/contact.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Orchard Street Fresh Market">
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
