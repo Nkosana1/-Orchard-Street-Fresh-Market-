@@ -1,0 +1,241 @@
+/* ============================================
+   Google Fonts Import
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&family=Varela+Round&display=swap');
+
+/* ============================================
+   CSS Variables - Color Palette
+   ============================================ */
+:root {
+    --primary-color: #27ae60;      /* Fresh green, like a crisp apple */
+    --secondary-color: #f39c12;    /* Warm orange, like a citrus fruit */
+    --accent-color: #8e44ad;       /* Deep purple, like an eggplant or plum */
+    --neutral-bg: #fefefe;         /* Clean white */
+    --text-color: #2c3e50;         /* Dark blue-gray for excellent readability */
+}
+
+/* ============================================
+   Reset & Base Styles
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--neutral-bg);
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+h1, h2 {
+    font-family: 'Nunito', 'Varela Round', 'Arial Rounded MT Bold', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+p, li {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* ============================================
+   Header Styles
+   ============================================ */
+header {
+    background-color: var(--neutral-bg);
+    border-bottom: 2px solid rgba(44, 62, 80, 0.1);
+    padding: 2rem 2rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+/* ============================================
+   Navigation Styles
+   ============================================ */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* ============================================
+   Main Content Styles
+   ============================================ */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 60vh;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+article {
+    padding: 1.5rem 0;
+}
+
+/* ============================================
+   Button Styles
+   ============================================ */
+button,
+.btn {
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 50px; /* Full border-radius for pill-like shape */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Open Sans', Arial, sans-serif;
+    display: inline-block;
+    text-decoration: none;
+}
+
+button:hover,
+.btn:hover {
+    background-color: #e67e22; /* Slightly darker orange on hover */
+    transform: translateY(-2px);
+}
+
+button:active,
+.btn:active {
+    transform: translateY(0);
+}
+
+/* ============================================
+   Footer Styles
+   ============================================ */
+footer {
+    background-color: var(--text-color);
+    color: white;
+    padding: 3rem 2rem 2rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+footer address {
+    font-style: normal;
+    margin-bottom: 1.5rem;
+}
+
+footer address p {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+footer .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+footer .social-media a:hover {
+    color: var(--secondary-color);
+}
+
+footer .social-icon {
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+footer p:last-child {
+    margin-top: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 1rem 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 1.5rem 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    footer {
+        padding: 2rem 1rem 1.5rem;
+    }
+
+    footer .social-media {
+        flex-wrap: wrap;
+    }
+}
+
