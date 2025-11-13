@@ -16,7 +16,7 @@
                 <li><a href="about.html">Our Story</a></li>
                 <li><a href="vegetables.html">Fresh Vegetables</a></li>
                 <li><a href="fruits.html">Seasonal Fruits</a></li>
-                <li><a href="contact.html">Find Us</a></li>
+                <li><a href="contact.php">Find Us</a></li>
             </ul>
         </nav>
     </header>
